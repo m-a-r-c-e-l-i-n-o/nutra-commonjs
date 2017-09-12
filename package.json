@@ -1,11 +1,11 @@
 {
   "name": "nutra-commonjs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The \"nutra-commonjs\" module is a commonjs module-loader for \"N.U.T.R.A.\" unit test runner.",
   "main": "dist/nutra-commonjs.js",
   "scripts": {
     "test": "test",
-    "build": "babel src --out-dir dist",
+    "build": "babel src --out-dir dist --source-maps",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -27,11 +27,12 @@
     "url": "https://github.com/m-a-r-c-e-l-i-n-o/nutra-commonjs/issues"
   },
   "homepage": "https://github.com/m-a-r-c-e-l-i-n-o/nutra-commonjs#readme",
+  "dependencies": {
+    "require-hacker": "^3.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.9.0",
-    "babel-preset-es2016": "^6.0.11"
-  },
-  "dependencies": {
-    "require-hacker": "^2.1.3"
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2016-node5": "^1.1.2"
   }
 }
